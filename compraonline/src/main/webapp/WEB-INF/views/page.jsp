@@ -65,10 +65,17 @@
 				<%@include file="about.jsp"%>
 			</c:if>
 
-			<!-- Loading only users clicks Contact -->
+			<!-- Loading only when users clicks Contact -->
 			<c:if test="${userClickContact == true }">
 				<%@include file="contact.jsp"%>
 			</c:if>
+			
+			
+			<!-- Loading only when users clicks Contact -->
+			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true }">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
+			
 		</div>
 		
 		<!-- Footer comes here -->
